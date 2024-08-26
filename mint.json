@@ -2,17 +2,17 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Moonglow Docs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/moonglow-alpha.png",
+      "light": "/logo/moonglow-alpha.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#fff7ed",
+    "light": "#fb923c",
+    "dark": "#c2410c",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#fb923c",
+      "to": "#c2410c"
     }
   },
   "topbarLinks": [
