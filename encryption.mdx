@@ -1,0 +1,61 @@
+---
+title: 'End-to-end encryption'
+description: 'Keeping your code and data private'
+---
+
+Moonglow supports end-to-end encryption of your notebook code. However, it requires some custom configuration.
+
+This guide assumes you already have the [Moonglow Extension](https://marketplace.visualstudio.com/items?itemName=moonglow.moonglowextension) installed.
+
+### Step 1. Create an SSH Key
+
+Make sure you have an SSH key configured on your local machine. 
+
+Moonglow can't currently support SSH keys with passphrases.
+
+<Accordion title="Create an SSH Key">
+    1. Open the Terminal
+    2. Paste the text below, replacing the email used with your own:
+
+    ```bash
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    ```
+
+    3. When you're prompted to save it, press enter:
+
+    ```bash
+    > Enter a file in which to save the key (/home/YOU/.ssh/id_ALGORITHM):[Press enter]
+    ```
+
+    4. When you're prompted to set a passphrase, leave it empty and press enter twice.
+</Accordion>
+
+### Step 2. Configure the Key in the Extension
+
+<Info>Make sure you are using Moonglow extension v0.23.0 or above.</Info>
+
+In VSCode, run the command __Moonglow: Set SSH Key Path__ and put in the path to your SSH key (in most instances, on Mac OS X, it should be `/Users/USERNAME/.ssh/id_ed25519`).
+
+You should see a pop-up in the bottom right saying "SSH public key was updated on Moonglow servers."
+
+### Step 3. Enable End-to-End Encryption in Settings
+
+Run the VSCode command __Preferences: Open User Settings__.
+
+Search for Moonglow. You should see an option for __Moonglow: Use Encrypted Tunnels__. Check the box.
+
+### Step 4. Start Server
+
+To start a Jupyter server remotely, run the the command __Moonglow: Start Server__.
+
+You should see the server starting up in the Moonglow Sessions section on the left.
+
+<Info>
+When starting AWS servers, you may see a 504 or 524 error. This is an issue we'll fix, but it doesn't affect the server startup.
+</Info>
+
+### Step 5. Connect to the Server
+
+Go to an iPython notebook in VSCode. In the top right, you can see the kernel selection. Select it, then select __Moonglow Servers__.
+
+Select the instance you want to connect to, then select the Jupyter Session you want to connect to.
