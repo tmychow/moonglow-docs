@@ -25,13 +25,6 @@
     "name": "Settings",
      "url": "https://app.moonglow.ai"
   },
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.moonglow.ai"
-    }
-  ],
   "navigation": [
     {
       "group": "Get Started",
