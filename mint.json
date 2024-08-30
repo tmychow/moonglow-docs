@@ -29,6 +29,7 @@
     {
       "group": "Get Started",
       "pages": [
+        "installation",
         "encryption"
       ]
     }
