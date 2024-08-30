@@ -3,9 +3,9 @@ title: 'File sync'
 description: 'Moving files between your local and remote workspaces'
 ---
 
-Filesync is only supported on Mac and Linux. 
+Filesync is only supported by default on Mac and Linux. 
 
-If you are using Windows, you maybe able to use it by installing [WSLinux](https://ubuntu.com/desktop/wsl).
+If you are using Windows, you must install [WSLinux](https://ubuntu.com/desktop/wsl) and rsync.
 
 ### (Prerequisite) Create an SSH Key
 
@@ -32,7 +32,7 @@ Moonglow can't currently support SSH keys with passphrases.
 
 ## Syncing your local workspace to the remote machine
 
-**Step 1**: Press "cmd + shift + P" or "ctrl + shift + P"
+**Step 1**: Press "cmd + shift + P" (Mac) or "ctrl + shift + P" (Windows).
 
 **Step 2**: Select "Moonglow: Sync Workspace to Remote"
 
@@ -40,7 +40,7 @@ Moonglow can't currently support SSH keys with passphrases.
 
 ## Syncing your remote machine back to your local workspace
 
-**Step 1**: Press "cmd + shift + P" or "ctrl + shift + P"
+**Step 1**: Press "cmd + shift + P" (Mac) or "ctrl + shift + P" (Windows).
 
 **Step 2**: Select "Moonglow: Sync Remote to Workspace"
 
@@ -48,5 +48,6 @@ Moonglow can't currently support SSH keys with passphrases.
 
 ## Notes
 
+- The first sync may take some time, but syncs after that should be substantially faster.
 - We currently don't sync anything defined in your `.gitignore` to the remote machine.
 - We don't sync dotfiles back from the remote machine.
