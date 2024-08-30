@@ -29,7 +29,13 @@
     {
       "group": "Get Started",
       "pages": [
-        "installation",
+        "installation"
+      ]
+    },
+    {
+      "group": "Power Users",
+      "pages": [
+        "file_sync",
         "encryption"
       ]
     }
