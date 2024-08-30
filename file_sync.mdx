@@ -3,16 +3,50 @@ title: 'File sync'
 description: 'Moving files between your local and remote workspaces'
 ---
 
+Filesync is only supported on Mac and Linux. 
+
+If you are using Windows, you maybe able to use it by installing [WSLinux](https://ubuntu.com/desktop/wsl).
+
+### (Prerequisite) Create an SSH Key
+
+You must have an SSH key configured on your local machine. You can check if you have one by searching
+
+Moonglow can't currently support SSH keys with passphrases.
+
+<Accordion title="Create an SSH Key">
+    1. Open the Terminal
+    2. Paste the text below, replacing the email used with your own:
+
+    ```bash
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    ```
+
+    3. When you're prompted to save it, press enter:
+
+    ```bash
+    > Enter a file in which to save the key (/home/YOU/.ssh/id_ALGORITHM):[Press enter]
+    ```
+
+    4. When you're prompted to set a passphrase, leave it empty and press enter twice.
+</Accordion>
+
 ## Syncing your local workspace to the remote machine
 
-### Step 1. Press "cmd + shift + P" or "ctrl + shift + P"
+**Step 1**: Press "cmd + shift + P" or "ctrl + shift + P"
 
-### Step 2. Select "Moonglow: Sync Workspace to Remote"
+**Step 2**: Select "Moonglow: Sync Workspace to Remote"
 
-### Step 3. Select the notebook associated with the remote machine you want it synced to
+**Step 3**: Select the notebook associated with the remote machine you want it synced to.
 
 ## Syncing your remote machine back to your local workspace
 
-### Step 1. Press "cmd + shift + P" or "ctrl + shift + P"
+**Step 1**: Press "cmd + shift + P" or "ctrl + shift + P"
 
-### Step 2. Select "Moonglow: Sync Remote to Workspace"
+**Step 2**: Select "Moonglow: Sync Remote to Workspace"
+
+**Step 3**: Select the notebook associated with the remote machine you want it synced from.
+
+## Notes
+
+- We currently don't sync anything defined in your `.gitignore` to the remote machine.
+- We don't sync dotfiles back from the remote machine.
